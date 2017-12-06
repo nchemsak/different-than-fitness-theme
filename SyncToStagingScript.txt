@@ -1,0 +1,5 @@
+option batch abort
+option confirm off
+open -explicit "f t p://differen@ftp.differenttttttthanfitness.commmmmmmm"
+keepuptodate "put local folder path here" /public_html/wp-content/themes/differentthanfitnesstheme
+exit
