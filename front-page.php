@@ -9,8 +9,14 @@
 					<div class="usercontentitem">
 						<?php the_content(); ?>
 				   </div>
+				   <div class="text-center">
+							<a href="https://www.facebook.com/DifferentThanFitness/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+				   			<a href="https://www.instagram.com/differentthanfitness/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				   			<a href="https://twitter.com/differentthantn" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					</div>
 				<?php endwhile; ?>
 				<?php endif; ?>
+
 			</div> 
 		</div>
 	</div>

@@ -52,205 +52,6 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page( $args );
 	
 }
-//
-///*-----------------------------------------------------------------------------------*/
-///*	Create the custom post types 
-///*-----------------------------------------------------------------------------------*/
-//function cptui_register_my_cpts() {
-//
-//	/**
-//	 * Post Type: Before and Afters.
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Before and Afters', 'jjwendel' ),
-//		"singular_name" => __( 'Before and After', 'jjwendel' ),
-//		"add_new_item" => __( 'Add New Before and After (IE Facelift 3)', 'jjwendel' ),
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Before and Afters', 'jjwendel' ),
-//		"labels" => $labels,
-//		"description" => "Use the following format to name your before and after image set: PROCEDURE #. For example \"Breast Augmentation 1\"",
-//		"public" => true,
-//		"publicly_queryable" => true,
-//		"show_ui" => true,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"has_archive" => false,
-//		"show_in_menu" => true,
-//		"exclude_from_search" => false,
-//		"capability_type" => "post",
-//		"map_meta_cap" => true,
-//		"hierarchical" => false,
-//		"rewrite" => array( "slug" => "before-and-after", "with_front" => true ), 
-//		"query_var" => true,
-//		"menu_icon" => "/wp-content/themes/jjwendel/images/photos.png",
-//		"supports" => array( "title" ),
-//	);
-//
-//	register_post_type( "photos", $args );
-//
-//	/**
-//	 * Post Type: Procedures.
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Procedures', 'jjwendel' ),
-//		"singular_name" => __( 'Procedure', 'jjwendel' ),
-//		"add_new_item" => __( 'Add Procedure', 'jjwendel' )
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Procedures', 'jjwendel' ),
-//		"labels" => $labels,
-//		"description" => "",
-//		"public" => true,
-//		"publicly_queryable" => true,
-//		"show_ui" => true,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"has_archive" => false,
-//		"show_in_menu" => true,
-//		"exclude_from_search" => false,
-//		"capability_type" => "post",
-//		"map_meta_cap" => true,
-//		"hierarchical" => false,
-//		"rewrite" => array( "slug" => "procedures", "with_front" => true ),
-//		"query_var" => true,
-//		"menu_icon" => "/wp-content/themes/jjwendel/images/page-icon.png",
-//		"supports" => array( "title", "thumbnail", "editor" ),
-//	);
-//
-//	register_post_type( "procedures", $args );
-//
-//	/**
-//	 * Post Type: Videos.
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Videos', 'jjwendel' ),
-//		"singular_name" => __( 'Video', 'jjwendel' ),
-//		"add_new_item" => __( 'Add New Video', 'jjwendel' )
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Videos', 'jjwendel' ),
-//		"labels" => $labels,
-//		"description" => "",
-//		"public" => true,
-//		"publicly_queryable" => true,
-//		"show_ui" => true,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"has_archive" => false,
-//		"show_in_menu" => true,
-//		"exclude_from_search" => false,
-//		"capability_type" => "post",
-//		"map_meta_cap" => true,
-//		"hierarchical" => false,
-//		"rewrite" => array( "slug" => "videos", "with_front" => true ),
-//		"query_var" => true,
-//		"menu_icon" => "/wp-content/themes/jjwendel/images/camera-icon.png",
-//		"supports" => array( "title", "editor" ),
-//	);
-//
-//	register_post_type( "videos", $args );
-//	
-//
-//}
-//
-//add_action( 'init', 'cptui_register_my_cpts' );
-//
-///*-----------------------------------------------------------------------------------*/
-///*	Create the custom post taxonomies
-///*-----------------------------------------------------------------------------------*/
-//function cptui_register_my_taxes() {
-//
-//	/**
-//	 * Taxonomy: Procedures (Images).
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Procedures (Images)', 'jjwendel' ),
-//		"singular_name" => __( 'Procedure', 'jjwendel' ),
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Procedures (Images)', 'jjwendel' ),
-//		"labels" => $labels,
-//		"public" => true,
-//		"hierarchical" => true,
-//		"label" => "Procedures (Images)",
-//		"show_ui" => true,
-//		"show_in_menu" => true,
-//		"show_in_nav_menus" => true,
-//		"query_var" => true,
-//		"rewrite" => array( 'slug' => 'gallery', 'with_front' => true,  'hierarchical' => true, ),
-//		"show_admin_column" => false,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"show_in_quick_edit" => false,
-//	);
-//	register_taxonomy( "gallery", array( "photos" ), $args );
-//
-//	/**
-//	 * Taxonomy: Procedure Types.
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Types', 'jjwendel' ),
-//		"singular_name" => __( 'Type', 'jjwendel' ),
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Types', 'jjwendel' ),
-//		"labels" => $labels,
-//		"public" => true,
-//		"hierarchical" => true,
-//		"label" => "Types",
-//		"show_ui" => true,
-//		"show_in_menu" => true,
-//		"show_in_nav_menus" => true,
-//		"query_var" => true,
-//		"rewrite" => array( 'slug' => 'plastic-surgery', 'with_front' => true, ),
-//		"show_admin_column" => false,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"show_in_quick_edit" => false,
-//	);
-//	register_taxonomy( "procedures_category", array( "procedures" ), $args );
-//
-//	/**
-//	 * Taxonomy: Video Groups.
-//	 */
-//
-//	$labels = array(
-//		"name" => __( 'Video Groups', 'jjwendel' ),
-//		"singular_name" => __( 'Video Grouping', 'jjwendel' ),
-//	);
-//
-//	$args = array(
-//		"label" => __( 'Video Groups', 'jjwendel' ),
-//		"labels" => $labels,
-//		"public" => true,
-//		"hierarchical" => true,
-//		"label" => "Video Groups",
-//		"show_ui" => true,
-//		"show_in_menu" => true,
-//		"show_in_nav_menus" => true,
-//		"query_var" => true,
-//		"rewrite" => array( 'slug' => 'v', 'with_front' => true, ),
-//		"show_admin_column" => false,
-//		"show_in_rest" => false,
-//		"rest_base" => "",
-//		"show_in_quick_edit" => false,
-//	);
-//	register_taxonomy( "videos_group", array( "videos" ), $args );
-//}
-//
-//add_action( 'init', 'cptui_register_my_taxes' );
-//
 
 /*-----------------------------------------------------------------------------------*/
 /*	Functions
@@ -266,6 +67,8 @@ function main_enqueue_scripts()
   
 		wp_register_script('hbootstrap',get_template_directory_uri() . '/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js');
 		wp_enqueue_script('hbootstrap'); 
+	   
+
 	   
 	   	if (is_front_page()) {
 
@@ -288,6 +91,9 @@ function main_enqueue_css()
 	
 
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+	
+	wp_register_style('fontawesome-css', get_template_directory_uri() . '/lib/fontawesome/css/font-awesome.min.css');
+    wp_enqueue_style('fontawesome-css');  
 	
 	wp_register_style('style-css', get_template_directory_uri() . '/style.css' );
    	wp_enqueue_style('style-css');  

@@ -120,7 +120,9 @@ a img.aligncenter {
 }
 
 
-h1 {
-    font-size: 100px;
-    color: red;
+.fa {
+    font-size: 40px;
+    color: #cd2e71;
+    margin-right: 10px;
+
 }
