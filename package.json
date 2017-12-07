@@ -1,0 +1,25 @@
+{
+  "name": "differentthanfitnesstheme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nchemsak/different-than-fitness-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nchemsak/different-than-fitness-theme/issues"
+  },
+  "homepage": "https://github.com/nchemsak/different-than-fitness-theme#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
